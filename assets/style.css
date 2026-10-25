@@ -1,0 +1,169 @@
+/* فونت پایه */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f0e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ساختار کلی */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* هدر */
+header {
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 2.5rem;        /* بهتر از px ثابت */
+    font-weight: 800;
+    color: #d14b4b;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* گرید محصولات - شروع با موبایل (mobile-first) */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;           /* موبایل: یک ستون */
+    gap: 25px;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+/* کارت هر آیتم */
+.menu-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+}
+
+/* عکس غذا/نوشیدنی */
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* سوئیچر زبان */
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffffcc;
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.lang-btn img {
+    width: 22px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.lang-btn:hover {
+    transform: scale(1.08);
+    background: #fff;
+}
+
+/* -------------------------------------------------- */
+/*                  ریسپانسیو (Mobile-First)          */
+/* -------------------------------------------------- */
+
+/* تبلت (از 601px به بالا) */
+@media (min-width: 601px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    header {
+        font-size: 3rem;
+    }
+}
+
+/* دسکتاپ کوچک (از 901px به بالا) */
+@media (min-width: 901px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .container {
+        padding: 30px 0;
+    }
+    
+    .menu-item img {
+        height: 240px;
+    }
+}
+
+/* موبایل خیلی کوچک (تنظیمات اضافی) */
+@media (max-width: 480px) {
+    header {
+        font-size: 2rem;
+        padding: 15px 10px;
+    }
+    
+    .menu-item {
+        padding: 15px;
+    }
+    
+    .menu-item img {
+        height: 180px;
+    }
+    
+    .lang-switcher {
+        top: 10px;
+        left: 10px;
+        gap: 8px;
+    }
+    
+    .lang-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .lang-btn img {
+        width: 18px;
+    }
+}
+
