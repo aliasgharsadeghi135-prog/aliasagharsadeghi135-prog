@@ -1,7 +1,7 @@
 # aliasagharsadeghi135-prog
 Hi, I'm Aliasghar 👋
 
-💻 Front-End Developer | Back-End Development
+💻 Front-End Developer | Back-End Developer
 
 - 🌱 I'm improving my skills in web development.
 - 🚀 I enjoy building projects and learning new technologies.
